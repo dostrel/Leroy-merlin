@@ -1,9 +1,10 @@
 <template>
   <div class="container-fluid">
-    
+
     <!-- Mes article -->
     <div class="container-fluid">
-        <Articles />
+      <router-view></router-view>
+
     </div>
   </div>
 </template>
@@ -11,13 +12,10 @@
 <script>
 
 //import componante
-  import Articles from './Articles'
 
   export default {
     name: 'Home',
-    components: {
-      Articles
-    },
+  
   }
 
 </script>

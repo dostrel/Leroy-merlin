@@ -12,10 +12,13 @@
     "bootstrap-vue": "^2.21.2",
     "core-js": "^3.6.5",
     "g": "^2.0.1",
+    "jquery": "^3.5.1",
     "sass": "^1.32.4",
     "sass-loader": "^10.1.1",
     "vue": "^2.6.12",
-    "vue-router": "^3.4.9"
+    "vue-carousel": "^0.18.0",
+    "vue-router": "^3.4.9",
+    "vue-slick-carousel": "^1.0.6"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
