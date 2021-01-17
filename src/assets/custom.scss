@@ -1,5 +1,4 @@
 hr:after {
-    content: "LEROY MERLIN";
     background-color: #ffffff;
     position: relative;
     top: -14px;
@@ -7,6 +6,20 @@ hr:after {
     padding-right: 20px;
 
 }
+
+hr.footer::after {
+    content: "LEROY MERLIN";
+    top: -5px;
+    color: rgb(120, 190, 32);
+}
+
+hr.return::after {
+    content: "RETOUR A LA BOUTIQUE DES ARTICLES";
+}
+
+
+
+$primary: rgb(120, 190, 32);
 
 @import '../../node_modules/bootstrap/scss/bootstrap';
 @import '../../node_modules/bootstrap-vue/src/index.scss';

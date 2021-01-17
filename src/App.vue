@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <Home msg="bienvenue"/>
+    
     <Footer msg="hello"/>
   </div>
 </template>

@@ -1,36 +1,46 @@
 <template lang="en">
   <div>
-        <div>
-            <h1>{{ article.label }}</h1>
-        </div>
-        <carousel  
-          :perPage="1"
->       <slide 
-            v-for="medium in media"
-            :key="medium.mediaID"   v-if="medium.type != 'DOC'"
-        >
-            <div class="container">
-                <div class="row">
-                    <div>
-                        <img v-bind:src="medium.url" 
-                        style="
-                        height: 300px;
-                        width: 300px;
-                        object-fit: contain;" />
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-6 mt-5">
+                   <div class="card-body">
+                        <h3 class="mb-5 font-italic">{{ article.label }}</h3>
+                        <carousel :perPage="1">  
+                            <slide 
+                                v-for="medium in media"
+                                :key="medium.mediaID"   v-if="medium.type != 'DOC'"
+                            >
+                                <div class="container">
+                                    <div class="row">
+                                        <div>
+                                            <img v-bind:src="medium.url" 
+                                            style="
+                                            height: 500px;
+                                            width: 100%;
+                                            object-fit: contain;" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </slide>
+                        </carousel>
                     </div>
+                    <router-link :to="{ name: 'articles'}" class="text-black"><hr class="return"></router-link>
                 </div>
-            </div>
-        </slide>
-        </carousel>
-        <div 
-            v-for="characteristic in characteristicsList"
-                :key="characteristic.code"
-            >
-            <p>
-                {{characteristic.label}} : {{characteristic.values[0]}}
-            </p>
-        </div>
-        
+              <div class="col-6  mt-5">
+                  <div class="card">
+                      <div class="card-header"
+                        v-for="characteristic in characteristicsList"
+                            :key="characteristic.code"
+                        >
+                        <p class="">
+                           <span>{{characteristic.label}}</span>  : <span class="text-primary">{{characteristic.values[0]}}</span>
+                        </p>
+                    </div>
+                  </div>
+                   
+              </div>
+          </div>
+      </div>
 </div>
 </template>
 <script>
