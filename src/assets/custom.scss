@@ -1,0 +1,12 @@
+hr:after {
+    content: "LEROY MERLIN";
+    background-color: #ffffff;
+    position: relative;
+    top: -14px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+
+@import '../../node_modules/bootstrap/scss/bootstrap';
+@import '../../node_modules/bootstrap-vue/src/index.scss';
